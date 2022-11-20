@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "node --trace-deprecation & http-server & mocha"
+    "test": "node --trace-deprecation & http-server -p 8000 & mocha"
   },
   "repository": {
     "type": "git",
