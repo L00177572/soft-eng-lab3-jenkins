@@ -1,5 +1,4 @@
 const { Builder, Browser, By, until } = require("selenium-webdriver")
-const chrome = require('selenium-webdriver/chrome');
 const assert = require("assert")
 
 describe("App integration testing", function () {
