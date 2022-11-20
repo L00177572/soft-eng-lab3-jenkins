@@ -1,4 +1,5 @@
 const { Builder, Browser, By, until } = require("selenium-webdriver")
+const chrome = require('selenium-webdriver/chrome');
 const assert = require("assert")
 
 describe("App integration testing", function () {
@@ -12,7 +13,10 @@ describe("App integration testing", function () {
   const b = 3
 
   before(async () => {
-    driver = await new Builder().forBrowser(Browser.CHROME).build()
+    driver = await new Builder()
+      .forBrowser(Browser.CHROME)
+      .setChromeOptions(new chrome.Options().addArguments(['--headless', '--no-sandbox']))
+      .build()
     await driver.get("http://localhost:8000")
     await driver.wait(until.titleIs("Lab 2 - Test Frameworks"), 20000)
   })
