@@ -18,6 +18,7 @@
   "homepage": "https://github.com/L00177572/soft-eng-lab3-jenkins#readme",
   "devDependencies": {
     "chromedriver": "^106.0.1",
+    "http-server": "^14.1.1",
     "mocha": "^10.1.0",
     "selenium-webdriver": "^4.6.1"
   }

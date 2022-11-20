@@ -15,7 +15,6 @@ describe("App integration testing", function () {
   before(async () => {
     driver = await new Builder()
       .forBrowser(Browser.CHROME)
-      .setChromeOptions(new chrome.Options().addArguments(['--headless', '--no-sandbox']))
       .build()
     await driver.get("http://localhost:8000")
     await driver.wait(until.titleIs("Lab 2 - Test Frameworks"), 20000)
