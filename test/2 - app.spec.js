@@ -2,7 +2,7 @@ const { Builder, Browser, By, until } = require("selenium-webdriver")
 const assert = require("assert")
 
 describe("App integration testing", function () {
-  this.timeout(1000000)
+  this.timeout(60000) //1min
 
   /** @type {Builder} */
   let driver = null
@@ -14,7 +14,7 @@ describe("App integration testing", function () {
   before(async () => {
     driver = await new Builder().forBrowser(Browser.CHROME).build()
     await driver.get("http://localhost:8000")
-    await driver.wait(until.titleIs("Lab 2 - Test Frameworks"), 15000)
+    await driver.wait(until.titleIs("Lab 2 - Test Frameworks"), 20000)
   })
 
   beforeEach(async () => {
